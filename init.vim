@@ -1,29 +1,49 @@
 " Specify a directory for plugins
-call plug#begin('~/AppData/Local/nvim/plugged')
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.local/share/nvim/plugged')
+
+" FarOut colorscheme for Vim
+Plug 'fcpg/vim-farout'
 
 " A tree explorer plugin for vim.
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
-"A plugin of NERDTree showing git status flags.
-Plug 'xuyuanp/nerdtree-git-plugin'
+" A plugin of NERDTree showing git status
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Progress 4GL/ABL syntax up to version 11.5.1.
-Plug 'vim-scripts/progress.vim'
-
-" A plugin that provides Rust file detection, syntax highlighting, formatting, Syntastic integration, and more.
+" Vim configuration for Rust.
 Plug 'rust-lang/rust.vim'
 
-" FarOut colorscheme for Vim.
-Plug 'fcpg/vim-farout'
+" Progress OpenEdge ABL Syntax
+Plug 'vim-scripts/progress.vim'
 
 " Initialize plugin system
 call plug#end()
 
-" Use the far out color scheme as default.
-colorscheme farout
+" Recommended settings for syntastic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" 
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
-" Set line numbers to display
+" Formatting with rustfmt
+let g:rustfmt_autosave = 1
+
+" Using FarOut colorscheme as default
+colorscheme FarOut
+
+" set line numbers
 set number
 
-" Set color column to 80 chars.
+" set colorcolumn
 set colorcolumn=80
+
+" tabstops are now 2 and spaces
+set tabstop=2
+set shiftwidth=2
+set expandtab
