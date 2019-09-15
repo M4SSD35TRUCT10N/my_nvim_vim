@@ -1,7 +1,12 @@
+" Automatic installation of all plugins
+if empty(glob('~/AppData/Local/nvim/plugged'))
+  autocmd VimEnter * PlugInstall --sync
+endif
+
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/AppData/Local/nvim/plugged')
 
 " FarOut colorscheme for Vim
 Plug 'fcpg/vim-farout'
