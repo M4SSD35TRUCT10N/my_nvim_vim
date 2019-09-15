@@ -1,6 +1,8 @@
-" Automatic installation of all plugins
-if empty(glob('~/AppData/Local/nvim/plugged'))
-  autocmd VimEnter * PlugInstall --sync
+" Automatic installation of plug-vim and all plugins
+if empty(glob('~/AppData/Local/nvim/autoload/plug.vim'))
+  silent !curl -fLo ./autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " Specify a directory for plugins
