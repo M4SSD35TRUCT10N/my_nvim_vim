@@ -54,3 +54,11 @@ set colorcolumn=80
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" project-wide search by Phil Gyford
+" command! -bang -nargs=* Find
+"   \ call fzf#vim#grep(
+"   \   'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
+"   \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4.. --exact'}, 'up:40%')
+"   \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4.. --exact'}, 'right:50%:hidden', '?'),
+"   \   <bang>0)
