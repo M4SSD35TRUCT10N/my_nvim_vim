@@ -54,6 +54,7 @@ set colorcolumn=80
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set ignorecase
 
 " project-wide search by Phil Gyford
 " command! -bang -nargs=* Find
