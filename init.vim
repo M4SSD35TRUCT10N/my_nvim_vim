@@ -22,6 +22,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Vim configuration for Rust.
 Plug 'rust-lang/rust.vim'
 
+" Vim syntax for TOML.
+Plug 'cespare/vim-toml'
+
 " Initialize plugin system
 call plug#end()
 
