@@ -22,9 +22,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Vim configuration for Rust.
 Plug 'rust-lang/rust.vim'
 
-" Progress OpenEdge ABL Syntax
-Plug 'vim-scripts/progress.vim'
-
 " Initialize plugin system
 call plug#end()
 
