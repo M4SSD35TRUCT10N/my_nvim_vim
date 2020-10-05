@@ -28,16 +28,6 @@ Plug 'vim-scripts/progress.vim'
 " Initialize plugin system
 call plug#end()
 
-" Recommended settings for syntastic
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" 
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-
 " Formatting with rustfmt
 let g:rustfmt_autosave = 1
 
@@ -50,16 +40,14 @@ set number
 " set colorcolumn
 set colorcolumn=80
 
-" tabstops are now 2 and spaces
-set tabstop=2
-set shiftwidth=2
+" tabstops are now 4 and spaces
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set ignorecase
 
-" project-wide search by Phil Gyford
-" command! -bang -nargs=* Find
-"   \ call fzf#vim#grep(
-"   \   'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
-"   \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4.. --exact'}, 'up:40%')
-"   \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4.. --exact'}, 'right:50%:hidden', '?'),
-"   \   <bang>0)
+" Exit insert mode in terminal via ESC
+:tnoremap <Esc> <C-\><C-n>
+
+" Disabling swap files creation
+set noswapfile
