@@ -51,3 +51,6 @@ set ignorecase
 
 " Disabling swap files creation
 set noswapfile
+
+" Using the systems clipboard
+set clipboard=unnamedplus
