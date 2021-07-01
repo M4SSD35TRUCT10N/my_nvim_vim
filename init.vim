@@ -32,7 +32,7 @@ call plug#end()
 let g:rustfmt_autosave = 1
 
 " Using FarOut colorscheme as default
-colorscheme FarOut
+colorscheme farout
 
 " set line numbers
 set number
